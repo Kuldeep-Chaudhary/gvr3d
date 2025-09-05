@@ -8,9 +8,10 @@ import gsap from "gsap";
 import QueryForm2 from "./QueryForm2";
 import { useBreakpointValue } from "@/utils/useBreakpointValue";
 import { IoCall } from "react-icons/io5";
+import { prefix } from "../../config";
 
 const Scene2 = ({ showScene1, setShowScene1 }) => {
-    // const cityTexture = useTexture("/textures/tile4.jpg");
+    // const cityTexture = useTexture(`${prefix}textures/tile4.jpg`);
     // cityTexture.colorSpace = THREE.SRGBColorSpace;
     function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
@@ -69,16 +70,16 @@ const secondRainling = isMobile ? [14.5, -5, -16.3] : [14.5, -3.8, -16.3];
         }
     });
 
-    const tileTexture = useTexture("/textures/tile2.jpg");
+    const tileTexture = useTexture(`${prefix}textures/tile2.jpg`);
     tileTexture.wrapS = tileTexture.wrapT = THREE.RepeatWrapping;
     tileTexture.repeat.set(10, 10);
 
-    const imgTexture = useTexture("/textures/panaromic.webp");
-    const railingTexture = useTexture("/textures/railing3.png");
-    const img2Texture = useTexture("/textures/scene2env3.webp");
+    const imgTexture = useTexture(`${prefix}textures/panaromic.webp`);
+    const railingTexture = useTexture(`${prefix}textures/railing3.png`);
+    const img2Texture = useTexture(`${prefix}textures/scene2env3.webp`);
     img2Texture.wrapS = img2Texture.wrapT = THREE.RepeatWrapping;
     img2Texture.repeat.set(2, 2);
-    const marbleTexture = useTexture("/textures/marble2.jpg");
+    const marbleTexture = useTexture(`${prefix}textures/marble2.jpg`);
     marbleTexture.wrapS = marbleTexture.wrapT = THREE.RepeatWrapping;
     marbleTexture.repeat.set(10, 10);
 
@@ -194,8 +195,8 @@ const handleArrowClick = () => {
     });
 
     const textTexturePath = showScene1
-        ? "/textures/text.png"
-        : "/textures/text-white.png";
+        ? `${prefix}textures/text.png`
+        : `${prefix}textures/text-white.png`;
 
     // load texture
     const textTexture = useLoader(THREE.TextureLoader, textTexturePath);
@@ -246,7 +247,7 @@ const handleArrowClick = () => {
                         <div className="w-full flex justify-end">
                             <div className="w-8 sm:w-10 h-8 sm:h-10 relative right-[-10px] top-[48px] sm:top-[60px] rounded-full border border-white"></div>
                         </div>
-                        <img src="/images/arrows.png" alt="arrow" className="w-16 sm:w-20 transition-transform duration-300 ease-in-out group-hover:translate-x-[25px]" />
+                        <img src={`${prefix}images/arrows.png`} alt="arrow" className="w-16 sm:w-20 transition-transform duration-300 ease-in-out group-hover:translate-x-[25px]" />
                     </div>
 
                     {formOpen && <QueryForm2 onClose={() => setFormOpen(false)} />}
@@ -259,7 +260,7 @@ const handleArrowClick = () => {
                 <mesh castShadow receiveShadow position={ladyposition} scale={ladyscale}>
                     <planeGeometry args={[7.5, 2]} />
                     <meshStandardMaterial transparent depthWrite={false} side={THREE.DoubleSide}
-                        map={useLoader(THREE.TextureLoader, "/textures/lady.png")}
+                        map={useLoader(THREE.TextureLoader, `${prefix}textures/lady.png`)}
                     />
                 </mesh>
 
@@ -286,7 +287,7 @@ const handleArrowClick = () => {
 
                 <mesh castShadow receiveShadow position={[0, -3.3, -5.5]} scale={2.5} renderOrder={99}>
                     <planeGeometry args={secondScene} />
-                    <meshStandardMaterial transparent depthWrite={false} side={THREE.DoubleSide} map={useLoader(THREE.TextureLoader, "/textures/2_new.webp")} />
+                    <meshStandardMaterial transparent depthWrite={false} side={THREE.DoubleSide} map={useLoader(THREE.TextureLoader, `${prefix}textures/2_new.webp`)} />
                 </mesh>
             </group>
         </group>

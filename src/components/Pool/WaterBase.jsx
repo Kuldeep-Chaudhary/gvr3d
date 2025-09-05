@@ -1,8 +1,9 @@
 import { useTexture } from '@react-three/drei'
 import * as THREE from 'three'
+import { prefix } from '../../../config';
 
 function WaterBase() {
-    const base = useTexture("/textures/tile2.jpg");
+    const base = useTexture(`${prefix}textures/tile2.jpg`);
     base.wrapS = base.wrapT = THREE.RepeatWrapping;
     base.repeat.set(10, 10);
 

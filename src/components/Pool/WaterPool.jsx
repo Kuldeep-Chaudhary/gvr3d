@@ -6,16 +6,17 @@ import { TextureLoader } from "three";
 import { useControls } from "leva";
 import WaterBase from "./WaterBase";
 import { useTexture } from "@react-three/drei";
+import { prefix } from "../../../config";
 
 export default function WaterPool({rotation}) {
   const ref = useRef();
   const planeRef = useRef();
   const { camera } = useThree();
 
-  const waterNormals = useLoader(TextureLoader, "/textures/waternormals.jpg");
+  const waterNormals = useLoader(TextureLoader, `${prefix}textures/waternormals.jpg`);
   waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping;
   waterNormals.repeat.set(2,2)
-  const rippleTexture = useLoader(TextureLoader, "/textures/ripple2.webp");
+  const rippleTexture = useLoader(TextureLoader, `${prefix}textures/ripple2.webp`);
 
   const { waterColor, waterDistortion } = useControls("Lake", {
     waterColor: "#214177",
@@ -127,7 +128,7 @@ const water = useMemo(() => {
     ));
   }, [ripples, rippleTexture]);
 
-  const glass = useTexture("/textures/water.jpg");
+  const glass = useTexture(`${prefix}textures/water.jpg`);
   return (
     <>
     <group rotation={rotation}>

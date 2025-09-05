@@ -7,10 +7,11 @@ import WaterPlane from "./WaterPlane";
 import PoolWater from "./PoolWater";
 import { useTexture } from "@react-three/drei";
 import WaterPool from "./Pool/WaterPool";
+import { prefix } from "./config";
 
 export default function SceneOne() {
-    const texture = useLoader(RGBELoader, "/textures/env3.hdr");
-    const texture2 = useTexture("/textures/city.png");
+    const texture = useLoader(RGBELoader, `${prefix}textures/env3.hdr`);
+    const texture2 = useTexture(`${prefix}textures/city.png`);
     texture2.colorSpace = THREE.SRGBColorSpace;
 
     const skyRef = useRef();
@@ -21,7 +22,7 @@ export default function SceneOne() {
         }
     });
 
-    const tileTexture = useTexture("/textures/tile.jpg");
+    const tileTexture = useTexture(`${prefix}textures/tile.jpg`);
     tileTexture.wrapS = tileTexture.wrapT = THREE.RepeatWrapping;
     return (
         <>
@@ -66,7 +67,7 @@ export default function SceneOne() {
             {/* Text  */}
             <mesh position={[0, 1.5, 1]} >
                 <planeGeometry args={[5, 2]} />
-                <meshStandardMaterial transparent map={useLoader(THREE.TextureLoader, "/textures/text.png")} />
+                <meshStandardMaterial transparent map={useLoader(THREE.TextureLoader, `${prefix}textures/text.png`)} />
             </mesh>
 
             {/* Lady  */}
@@ -76,7 +77,7 @@ export default function SceneOne() {
                     transparent
                     depthWrite={false}
                     side={THREE.DoubleSide}
-                    map={useLoader(THREE.TextureLoader, "/textures/lady.png")}
+                    map={useLoader(THREE.TextureLoader, `${prefix}textures/lady.png`)}
 
                 />
             </mesh>

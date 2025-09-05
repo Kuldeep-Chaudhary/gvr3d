@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import { prefix } from "../../config";
 
 const inputClasses =
     "mt-1 block w-full border-b border-gray-300 py-2 text-gray-400 placeholder-gray-400 focus:outline-none focus:border-gray-500";
@@ -40,7 +41,7 @@ const QueryForm = ({ onClose }) => {
                 
                 <div className="block h-[100px]  md:h-[20vh] relative">
                     <Image
-                        src="/images/forming.webp"
+                        src={`${prefix}images/forming.webp`}
                         alt="Contact form illustration"
                         fill
                         className="object-cover border-t-2 border-[#26382b]"
