@@ -10,15 +10,14 @@ const Navbar = ({ showScene1 }) => {
         </div>
 
         <div className="rera_sec">
-          <div className="flex  items-center gap-[1px] sm:gap-1 md:gap-2">
+          <div className="flex  items-top md:items-center  gap-[1px] sm:gap-1 md:gap-2">
             <div
               className={`rera_details text-[12px] md:text-[18px] font-[100]  ${
                 showScene1 ? "text-black" : "text-white"
-              } flex  sm:items-end tracking-wider  transition-colors duration-500`}
+              } flex gap- sm:items-center tracking-wider  transition-colors duration-500`}
             >
-            <FaLocationDot className="mt-[5px] mr-[5px] "/>
-
-                    <div className="text-[16px] md:text-[20px] px-[15px] md:px-[0] bottom_text uppercase tracking-wider w-full sm:text-xl  flex flex-col justify-center items-center text-center text-black">
+            <FaLocationDot className="mt-[5px] mr-[5px] sm:mb-2 "/>
+            <div className="text-[16px] md:text-[20px] px-[15px] md:px-[0] bottom_text uppercase tracking-wider w-full sm:text-xl  flex flex-col justify-center items-center text-center text-black">
             sector 107 noida
                     </div>
               {/* <p className="text-end md:text-start">RERA NUMBER: UPRERAPRJ510056/09/2025</p>
