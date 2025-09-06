@@ -40,11 +40,11 @@ const QueryForm = ({ onClose }) => {
                     </button>
                 
                 <div className="block h-[100px]  md:h-[20vh] relative">
-                    <Image
+                    <img
                         src={`${prefix}images/forming.webp`}
                         alt="Contact form illustration"
                         fill
-                        className="object-cover border-t-2 border-[#26382b]"
+                        className="object-cover border-t-2 border-[#26382b] absolute w-full h-full"
                         priority
                     />
                 </div>
