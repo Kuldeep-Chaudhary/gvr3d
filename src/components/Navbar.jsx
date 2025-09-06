@@ -17,7 +17,7 @@ const Navbar = ({ showScene1 }) => {
               } flex gap- sm:items-center tracking-wider  transition-colors duration-500`}
             >
             <FaLocationDot className="mt-[5px] mr-[5px] sm:mb-2 "/>
-            <div className="text-[16px] md:text-[20px] px-[15px] md:px-[0] bottom_text uppercase tracking-wider w-full sm:text-xl  flex flex-col justify-center items-center text-center text-black">
+            <div className="text-[16px] md:text-[20px] px-[15px] md:px-[0] bottom_text uppercase tracking-wider w-full sm:text-xl  flex flex-col justify-center items-center text-center">
             sector 107 noida
                     </div>
               {/* <p className="text-end md:text-start">RERA NUMBER: UPRERAPRJ510056/09/2025</p>
