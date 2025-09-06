@@ -231,9 +231,17 @@ const handleArrowClick = () => {
                     {/* Bottom Text */}
                     <div className="text-[16px] md:text-[20px] px-[15px] md:px-[0] bottom_text uppercase tracking-wider w-full sm:text-xl absolute bottom-20 sm:bottom-10 flex flex-col justify-center items-center text-center text-white">
                       {line ? "Dinner Dates on the 40th floor" : "Cloudside swims on the 40th floor"}
-                      <span className="mt-[7px] text-[12px]">RERA NUMBER: UPRERAPRJ510056/09/2025</span>
+                      <span className="mt-[7px] text-[12px]">RERA NUMBER: UPRERAPRJ510056/09/2025 </span>
                        
                     </div>
+                     {/* call sec  */}
+                    <div className="absolute left-0 md:left-10 bottom-7 sm:bottom-5 w-full text-white flex justify-center md:justify-end items-center gap-4 sm:gap-6">
+                      <div className="qr block">
+                          <img src="/images/qrcode.png" alt="qr" className="w-10 h-auto " />
+                      </div>
+                    </div>
+
+            
 
                     {/* call sec  */}
                     <div className="absolute right-0 md:right-10 bottom-7 sm:bottom-5 w-full text-white flex justify-center md:justify-end items-center gap-4 sm:gap-6">

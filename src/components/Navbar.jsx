@@ -26,9 +26,6 @@ const Navbar = ({ showScene1 }) => {
               <p className="text-end  md:text-start">BANK & BRANCH ADDRESS: PNB, SECTOR 104, NOIDA, UP</p>
               <p className="text-end  md:text-start">LAUNCH DATE OF PROJECT: 11-06-2025</p> */}
             </div>
-            <div className="qr block">
-              <img src="/images/qrcode.png" alt="qr" className="w-10 h-auto " />
-            </div>
           </div>
         </div>
       </div>
